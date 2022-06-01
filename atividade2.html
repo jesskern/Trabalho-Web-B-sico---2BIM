@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Atividade 02</h1>
+    <p> Tendo como dados de entrada a altura e o gênero de uma pessoa, escreva um script que calcule o seu peso ideal. <br>
+        Para homens, utilize a fórmula (72.7 * altura) – 58. Para mulheres, e utilize a fórmula (62.1 * altura) – 44.7. 
+    </p><br>
+    
+     
+    <label for="altura">Insira sua altura atual: </label> 
+    <input type="number" id="altura" max="2.50" min="0"><br><br>
+    
+    <label for="genero">Selecione seu gênero: </label> 
+    <select name="genero" id="genero"><br><br>
+        <option value="" disabled selected hidden>Gênero</option>
+        <option value="1">Feminino</option>
+        <option value="2">Masculino</option>
+    </select>
+    <br>
+   
+    <button 
+        id="atividade02" 
+        onclick="atividade02()">
+        Calcular
+    </button>
+
+    <p id="resultado02"></p>
+
+</body>
+
+<script src="script.js"></script>
+</html>
