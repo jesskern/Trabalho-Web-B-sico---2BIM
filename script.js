@@ -48,3 +48,92 @@ function atividade02 (){
     }
 
 }
+
+function atividade03(){
+    var menorValor;
+    var primeiraVez = true;
+    let novoParagrafo03 = document.getElementById("resultado03");
+
+    for (var i = 0; i < 3; i++){
+        var resultado = prompt("Informe um número: ");
+
+        if (primeiraVez){
+            menorValor = resultado;
+        }
+
+        else if(menorValor > resultado){
+            menorValor = resultado;
+        }
+
+        primeiraVez = false;
+    }
+    
+    novoParagrafo03.innerHTML = `O menor número informado foi: ${menorValor}`;
+
+}
+
+function atividade07(){
+    var dia;
+    var numerosemana = +document.getElementById("numero").value;
+
+    switch (numerosemana) {
+        case 1:
+            dia = "domingo";
+        break;
+
+        case 2:
+            dia = "segunda-feira";
+        break;
+        
+        case 3:
+            dia = "terça-feira";
+        break;
+
+        case 4:
+            dia = "quarta-feira";
+        break;
+
+        case 5:
+            dia = "quinta-feira";
+        break;
+
+        case 6:
+            dia = "sexta-feira";
+        break;
+
+        case 7:
+            dia = "sábado";
+    }
+
+    document.getElementById("resultado07").innerHTML = `O dia da semana escolhido foi: ` + dia;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
