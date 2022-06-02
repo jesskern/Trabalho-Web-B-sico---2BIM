@@ -108,6 +108,20 @@ function atividade07(){
     document.getElementById("resultado07").innerHTML = `O dia da semana escolhido foi: ` + dia;
 }
 
+function atividade10(){
+    var fatorial = +document.getElementById("fatorial10").value;
+    var resultado = fatorial;
+    var primeiroMultiplicador = fatorial -1;
+    
+    for (var i = primeiroMultiplicador; i > 1; i--){
+        resultado *= i;
+
+    }
+    
+    document.getElementById("resultado10").innerHTML = `O fatorial é: ${(resultado)}`;
+
+}
+
 
 
 
