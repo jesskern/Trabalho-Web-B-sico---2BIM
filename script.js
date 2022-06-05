@@ -1,18 +1,3 @@
-function aula01(){
-
-    var valor = document.getElementById("volume").value;
-    document.getElementById("info").innerHTML = valor;
-
-}
-
-
-function aula02(){
-    var texto = document.getElementById("comentarios").value;
-    var resto = 150 - texto.length;
-
-    document.getElementById("info").innerHTML = `Restam ${resto} caracteres.`
-}
-
 function atividade01(){
     var numero = [];
     let novoParagrafo01 = document.getElementById("resultado01");
@@ -72,6 +57,51 @@ function atividade03(){
 
 }
 
+function atividade04() {
+    var num = document.getElementById("num").value;
+    let paragrafo4 = document.getElementById("resultado04");
+
+    if (num % 2 == 0) {
+        paragrafo4.innerHTML = `Esse número é par!`
+    
+    }else if (num < 0) {
+        paragrafo4.innerHTML = `O valor absoluto do número informado é: ${Math.abs(num)}`
+    
+    } else {
+        paragrafo4.innerHTML = `Esse número é impar!`
+    }
+}
+
+function atividade05() {
+    var num = document.getElementById("num").value;
+
+    if (num % 2 == 0 && num % 3 == 0) {
+        alert("Esse número é divisivel por 2 e por 3.");
+    } else {
+        alert("Esse número não divisivel por 2 nem por 3.");
+    }
+
+    document.getElementById("num").value = "";
+    document.getElementById("num").focus();
+}
+
+function atividade06() {
+    var num = document.getElementById("num").value;
+    let paragrafo6 = document.getElementById("resultado06");
+
+    if (num % 7 == 0 ) {
+        paragrafo6.innerHTML = `Esse número é divisivel 7.`;
+    }
+
+    else if(num % 2 == 0) {
+        paragrafo6.innerHTML = `Esse número é divisivel por 2.`;
+    }
+    
+    else {
+        paragrafo6.innerHTML = `Esse número não divisivel por nenhum dos dois.`;
+    }
+}
+
 function atividade07(){
     var dia;
     var numerosemana = +document.getElementById("numero").value;
@@ -107,6 +137,32 @@ function atividade07(){
 
     document.getElementById("resultado07").innerHTML = `O dia da semana escolhido foi: ` + dia;
 }
+
+function atividade08(){
+    var contador = 0;
+    var resultadoContador = 0;
+    let paragrafo8 = document.getElementById("resultado08");
+    
+    for (contador = 0; contador <= 20; contador+=2){
+        if (contador % 2 == 0) {
+            paragrafo8.innerHTML = `${resultadoContador += contador}, `; 
+        }
+        paragrafo8.innerHTML = `O resultado da operação é ${resultadoContador}`
+    }
+}
+
+
+function atividade09(){
+    var paragrafo9 = document.getElementById('resultado09');
+    var multip='';
+    var numlido = document.getElementById("numlido").value;
+
+    
+    for(var count = 1; count <= 10 ; count++)
+    multip += numlido + " x " + count + " = " + numlido*count+"<br/>";
+    paragrafo9.innerHTML = multip;
+}
+
 
 function atividade10(){
     var fatorial = +document.getElementById("fatorial10").value;
